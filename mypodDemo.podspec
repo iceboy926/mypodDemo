@@ -121,7 +121,11 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
+    s.platform     = :ios, "7.0"            #支持的平台及版本，这里我们呢用swift，直接上9.0
+    s.requires_arc = true                    #是否使用ARC
 
+    s.frameworks = 'UIKit', 'QuartzCore', 'Foundation'    #所需的framework,多个用逗号隔开
+    s.module_name = 'mypodDemo'                #模块名称
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
